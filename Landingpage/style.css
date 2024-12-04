@@ -1,0 +1,194 @@
+/* Lokale Schriftartdefinition */
+@font-face {
+        font-family: 'Gotham-Bold';
+        src: url('../Fonts/Gotham-Bold.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+
+.index {
+    display: flex;
+    margin: 0;
+    height: 100vh; /* Volle Höhe des Viewports */
+    overflow: hidden; /* Verhindert Scrollen */
+    background-color: black;
+    font-family: Gotham;
+}
+
+a {
+    text-decoration: none; /* Entfernt die Unterstreichung von Links */
+}
+
+.impressum-link {
+    position: absolute;  /* Setzt den Impressum-Link relativ zum nächstgelegenen positionierten Vorfahren (hier: body) */
+    z-index: 1000;       /* Stellt sicher, dass der Link über anderen Inhalten angezeigt wird */
+    bottom: 2vh;           /* Abstand vom oberen Rand des Bildschirmes */
+    left: 2vh;         /* Abstand vom rechten Rand des Bildschirmes */
+    font-family: Gotham-Book;   /* Legt die Schriftart fest */
+    font-size: 15px;     /* Legt die Schriftgröße fest */
+    color: white;        /* Weißer Text, der auf dem schwarzen Hintergrund hervorsticht */
+    padding: 8px 12px;   /* Abstand um den Text */
+}
+
+
+.section {
+    width: 33.33%; /* Jede Sektion nimmt ein Drittel des Bildschirms ein */
+    height: 100vh; /* Volle Höhe des Bildschirmes */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Ermöglicht das Positionieren von Logo und Button */
+    transition: transform 0.5s ease; /* Fügt eine sanfte Animation beim Hover hinzu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.garments {
+    background-image: url('../img/Stoffrollen.png');
+}
+
+.events {
+    background-image: url('../img/hintergrund.png');
+}
+
+.archive {
+    background-image: url('../img/Insta.png');
+}
+
+.section:hover {
+    transform: scale(1.1); /* Vergrößert die Sektion beim Hover */
+}
+
+.logo {
+    position: absolute;
+    top: 25%; /* Positioniert das Logo weiter unten */
+    width: 70%; /* Erhöht die Größe des Logos */
+}
+
+
+
+
+/* Spezifische Stile für jeden Button */
+.button {
+    position: absolute;
+    bottom: 20%; /* Positioniert den Button weiter oben */
+    padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+    font-family: Gotham-Bold;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 2px;
+}
+
+.button-garments {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.button-events {
+    background-color: #ffed00;
+    color: #000000;
+}
+
+.button-archive {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+.button:hover {
+    opacity: 0.8; /* Verringert die Transparenz beim Hover leicht */
+}
+
+/* Ab hier beginnt das Responive Desing */
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        width: 80%; /* Erhöht die Größe des Logos */
+    }
+    }
+
+@media screen and (max-width: 750px) {
+    .button {
+        padding: 9px 45px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 90%; /* Erhöht die Größe des Logos */
+    }
+
+    .impressum {
+        font-size: 12px;
+    }
+    }
+
+@media screen and (max-width: 550px) {
+    .button {
+        padding: 8px 35px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-family: Gotham-Bold;
+        font-size: 12px;
+    }
+
+    .impressum {
+        font-size: 10px;
+        left: 1.5vh;
+        bottom: 1.5vh;
+    }
+    }
+
+@media screen and (max-width: 420px) {
+    .button {
+        padding: 7px 25px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 10px;
+    }
+    }
+
+
+@media screen and (max-width: 420px) {
+    .button {
+        padding: 7px 20px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 10px;
+    }
+    }
+
+@media screen and (max-width: 330px) {
+    .button {
+        padding: 7px 15px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 10px;
+    }
+    }
+
+
+
+
+
+
+
+
+    /* Ab hier beginnt das Design der Impressum Unterseite */
+
+    .impressum-site {
+        color: #ffffff;
+        background-color: #000000;
+        font-family: Gotham;
+    }
+
+    .logolink {
+        margin: 50px;
+    }
+    
+    .logo-impressum {
+        width: 350px;
+        margin-top: 30px;
+        margin-left: -15px;
+    }
+
+    .impressum-section {
+        padding-left: 50px;
+        padding-top: 35px;
+    }
+
+    .titel {
+        font-size: 25px;
+    }
