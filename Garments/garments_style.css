@@ -1,0 +1,149 @@
+@font-face {
+    src: url('../Fonts/Gotham-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, a {
+    margin: 0;
+    padding: 0;
+    font-family: Gotham;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+header {
+    background-color: #58696d;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo-link img {
+    width: 150px;
+}
+
+.nav a {
+    margin: 10px;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto; /* Ermöglicht Flexibilität im Wachstum ohne Überlauf */
+    min-height: 0; /* Hilft gegen Überlaufprobleme bei Flexbox in einigen Browsern */
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url("../img/Stoffrollen.png");
+    background-size: cover;
+    background-position: center top;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-link {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-link:hover {
+    transform: scale(1.05);
+}
+
+.product-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #58696d;
+    padding: 20px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-titel {
+    margin: 0;
+    font-size: 20px;
+}
+
+.footer-section a {
+    margin: 5px 0;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .main {
+        padding-top: 200px;
+    }
+
+    .product-grid {
+        align-items: center;
+    }
+
+    .product-link {
+        width: 30%;
+        height: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .nav a {
+        font-size: 12px;
+        margin: 2px;
+        display: flex;
+        columns: row;
+
+    }
+
+    .product-grid {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .product-link {
+        width: 50%;
+        height: auto;
+    }
+
+    footer {
+        padding: 20px 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-link {
+        width: 70%;
+        height: auto;
+    }
+}

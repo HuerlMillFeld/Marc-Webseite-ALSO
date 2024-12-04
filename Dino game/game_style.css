@@ -1,0 +1,231 @@
+/* Lokale Schriftartdefinition */
+@font-face {
+  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  font-family: Gotham, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000000;
+}
+
+header {
+  background-color: #000000;
+  height: 100px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logolink {
+  margin: 50px;
+}
+
+.logo {
+  width: 150px;
+  margin-left: 30px;
+}
+
+.links {
+  margin: 50px;
+}
+
+.nav {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #ffed00;
+}
+
+#container {
+  background-color: #ffed00;
+  padding: 20px;
+  text-align: center;
+}
+
+#score {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+h1 {
+  font-family: Gotham-Ultra, sans-serif;
+  font-weight: normal;
+}
+
+#game {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  background-image: url("../img/game-hintergrundv2.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.background-animation {
+  animation: background-animation 10s infinite linear;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -600px 0px;
+  }
+}
+
+#dino {
+  height: 113px;
+  width: 75px;
+  top: 189px;
+  position: relative;
+  background-image: url("../img/dancing\ skeleton.gif");
+  background-size: cover;
+}
+
+#rock {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 201px;
+  left: 500px;
+  background-image: url("../img/jump-objekt.png");
+  background-size: cover;
+}
+
+.rock-animation {
+  animation: rock 1.33s infinite;
+}
+
+@keyframes rock {
+  0% {
+    left: 550px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+.jump-animation {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0% {
+    top: 225px;
+  }
+  50% {
+    top: 75px;
+  }
+  75% {
+    top: 75px;
+  }
+  100% {
+    top: 225px;
+  }
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 55px;
+    font-family: Gotham-Bold;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 2px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+button:hover {
+  background-color: #ffed00;
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Gotham, sans-serif;
+  padding: 20px 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-titel {
+  margin: 0;
+  font-size: 20px;
+}
+
+.footer-section a {
+  color: white;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ffed00;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logolink {
+    margin: 0 0 10px 0;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .link {
+    margin: 5px 0;
+  }
+
+  #container {
+    padding: 10px;
+  }
+
+  #game {
+    height: auto;
+    min-height: 200px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 25px;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
